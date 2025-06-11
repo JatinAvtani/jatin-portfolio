@@ -107,11 +107,11 @@ export const ContactSection = () => {
 
           <div
             className="bg-card p-8 rounded-lg shadow-xs"
-            onSubmit={handleSubmit}
+            
           >
             <h3 className="text-2xl font-semibold mb-6"> Send a Message</h3>
 
-            <form className="space-y-6">
+            <form action="https://formsubmit.co/jatinavtani345@gmail.com" method="POST" className="space-y-6">
               <div>
                 <label
                   htmlFor="name"
