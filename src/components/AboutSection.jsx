@@ -1,4 +1,4 @@
-import { Briefcase, Code, User } from "lucide-react";
+import { Trophy, Code, User, GraduationCap, Cpu } from "lucide-react";
 
 export const AboutSection = () => {
   return (
@@ -16,11 +16,11 @@ export const AboutSection = () => {
             </h3>
 
             <p className="text-muted-foreground">
-              I'm a passionate and driven web developer with a strong foundation in full-stack development and a growing expertise in AI and modern technologies like React.js, Node.js, and MongoDB. As someone who’s consistently learning and building—from competitive coding on LeetCode and CodeChef to real-world projects like an AI-powered image generator—I thrive on turning complex ideas into smooth, user-friendly experiences.
+              I'm a passionate and driven software engineer with a strong foundation in scalable full-stack development and advanced GenAI. As someone who’s consistently learning and building—from solving 900+ problems as a LeetCode Knight to architecting complex AI-powered systems—I thrive on turning challenging technical problems into intelligent, user-friendly solutions.
             </p>
 
             <p className="text-muted-foreground">
-              Whether it’s exploring GenAI, diving into system-level concepts like OS and DBMS, or optimizing DSA skills in C++ for placements, I bring a curious mind, a sharp eye for detail, and an unshakable work ethic. Every line of code I write is fueled by ambition and a genuine love for tech.
+              Whether it’s orchestrating multi-agent systems with LangGraph, mastering distributed systems, or optimizing cloud infrastructure on AWS, I bring a curious mind, a sharp eye for architecture, and an unshakable work ethic. Every line of code I write is fueled by ambition and a genuine love for tech.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
@@ -47,9 +47,9 @@ export const AboutSection = () => {
         <Code className="h-6 w-6 text-primary" />
       </div>
       <div className="text-left">
-        <h4 className="font-semibold text-lg">Full-Stack Development</h4>
+        <h4 className="font-semibold text-lg">Full-Stack Engineering</h4>
         <p className="text-muted-foreground">
-          Building responsive, real-world web applications using React.js, Node.js, Express, and MongoDB with clean and scalable code.
+          Building robust web applications and microservices using Next.js, Node.js, Redis, Kafka, and PostgreSQL with Prisma and Supabase.
         </p>
       </div>
     </div>
@@ -58,12 +58,12 @@ export const AboutSection = () => {
   <div className="gradient-border p-6 card-hover">
     <div className="flex items-start gap-4">
       <div className="p-3 rounded-full bg-primary/10">
-        <User className="h-6 w-6 text-primary" />
+        <Cpu className="h-6 w-6 text-primary" />
       </div>
       <div className="text-left">
-        <h4 className="font-semibold text-lg">GenAI Enthusiast</h4>
+        <h4 className="font-semibold text-lg">GenAI & LLMs</h4>
         <p className="text-muted-foreground">
-          Exploring Generative AI as a beginner through hands-on projects, learning to integrate APIs like ClipDrop into web apps to build creative tools.
+          Developing intelligent systems using LangChain, LangGraph, and RAG architectures to integrate advanced Multi-Agent capabilities into real-world tools.
         </p>
       </div>
     </div>
@@ -72,12 +72,26 @@ export const AboutSection = () => {
   <div className="gradient-border p-6 card-hover">
     <div className="flex items-start gap-4">
       <div className="p-3 rounded-full bg-primary/10">
-        <Briefcase className="h-6 w-6 text-primary" />
+        <Trophy className="h-6 w-6 text-primary" />
       </div>
       <div className="text-left">
-        <h4 className="font-semibold text-lg">DSA Learner</h4>
+        <h4 className="font-semibold text-lg">Competitive Programmer</h4>
         <p className="text-muted-foreground">
-          Practicing over 170+ problems on LeetCode and preparing for placements by mastering core data structures, algorithms, and system concepts like OS and DBMS.
+          Solved 900+ DSA problems. LeetCode Knight (Max Rating: 1879), Codeforces Pupil (Max Rating: 1224), and Global Rank 733 in LC Weekly Contests.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div className="gradient-border p-6 card-hover">
+    <div className="flex items-start gap-4">
+      <div className="p-3 rounded-full bg-primary/10">
+        <GraduationCap className="h-6 w-6 text-primary" />
+      </div>
+      <div className="text-left">
+        <h4 className="font-semibold text-lg">Education & Leadership</h4>
+        <p className="text-muted-foreground">
+          B.Tech in CSE at NIT Patna (CGPA: 8.33). Core Subjects: Distributed Systems, Cloud Computing. Active contributor as Web Team Member for HackSlash.
         </p>
       </div>
     </div>

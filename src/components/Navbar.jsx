@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Github, Linkedin } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const navItems = [
@@ -41,7 +41,7 @@ export const Navbar = () => {
         </a>
 
         {/* desktop nav */}
-        <div className="hidden md:flex space-x-12 mt-1">
+        <div className="hidden md:flex space-x-12 mt-1 items-center">
           {navItems.map((item, key) => (
             <a
               key={key}
@@ -51,6 +51,14 @@ export const Navbar = () => {
               {item.name}
             </a>
           ))}
+          <div className="flex items-center gap-4 border-l border-border pl-6 ml-2">
+            <a href="https://github.com/JatinAvtani" target="_blank" rel="noreferrer" className="text-foreground/80 hover:text-primary transition-colors duration-300">
+              <Github size={20} />
+            </a>
+            <a href="https://www.linkedin.com/in/jatin-avtani" target="_blank" rel="noreferrer" className="text-foreground/80 hover:text-primary transition-colors duration-300">
+              <Linkedin size={20} />
+            </a>
+          </div>
         </div>
 
         {/* mobile nav */}

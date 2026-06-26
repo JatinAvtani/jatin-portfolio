@@ -16,18 +16,38 @@ export const ContactSection = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-
     setIsSubmitting(true);
 
-    setTimeout(() => {
-      toast({
-        title: "Message sent!",
-        description: "Thank you for your message. I'll get back to you soon.",
+    const formData = new FormData(e.target);
+
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/jatinavtani345@gmail.com", {
+        method: "POST",
+        headers: { 
+          'Accept': 'application/json'
+        },
+        body: formData
       });
+
+      if (response.ok) {
+        toast({
+          title: "Message sent!",
+          description: "Thank you for your message. I'll get back to you soon.",
+        });
+        e.target.reset();
+      } else {
+        throw new Error("Failed to send");
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Something went wrong. Please try again.",
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 1500);
+    }
   };
   return (
     <section id="contact" className="py-24 px-4 relative bg-secondary/30">
@@ -70,7 +90,7 @@ export const ContactSection = () => {
                 <div>
                   <h4 className="font-medium ml-4"> Phone</h4>
                   <a
-                    href="+91 9558204055"
+                    href="tel:+919558204055"
                     className="text-muted-foreground hover:text-primary transition-colors ml-5"
                   >
                    +91 9558204055
@@ -83,8 +103,8 @@ export const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="font-medium "> Location</h4>
-                  <a className="text-muted-foreground hover:text-primary transition-colors ml-5">
-                    Surat , Gujarat , India
+                  <a href="https://maps.google.com/?q=Surat,Gujarat,India" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-primary transition-colors ml-5 block">
+                    Surat, Gujarat, India
                   </a>
                 </div>
               </div>
@@ -111,7 +131,7 @@ export const ContactSection = () => {
           >
             <h3 className="text-2xl font-semibold mb-6"> Send a Message</h3>
 
-            <form action="https://formsubmit.co/jatinavtani345@gmail.com" method="POST" className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label
                   htmlFor="name"
